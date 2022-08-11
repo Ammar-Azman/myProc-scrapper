@@ -13,13 +13,15 @@ def launch_scrapper(start, end_before):
     2. Extract the data from myProcurement. 
     3. Push into Google Sheet allocated. 
     """
+    SPREADSHEET_NAME = ''
+    SHEET_NAME = ''
     try:
         all_info = scrap.extract_info(start, end_before)
 
         # Google Sheet setup
-        sh = goo.open_sheet('myProc data')
+        sh = goo.open_sheet(SPREADSHEET_NAME)
         #sh.add_worksheet(title='Tender', rows=100, cols=20) # add sheet
-        worksheet = sh.worksheet(title='Tender') # choose sheet
+        worksheet = sh.worksheet(title=SHEET_NAME) # choose sheet
 
         # Dataframe setup
         df = pd.DataFrame(all_info)
