@@ -1,8 +1,5 @@
-from tkinter import Y
 import gspread
-from faker import Faker
 import pandas as pd
-from faker.providers.person.en import Provider 
 import pathlib
 
 class Google:
