@@ -4,7 +4,7 @@ import pathlib
 
 class Google:
     def get_service_account(self):
-        myProc_path = pathlib.Path('./jsonfile/jsonFromGoogle.json')
+        myProc_path = pathlib.Path('/home/ammar/myProc/venvProc/jsonfile/jsonFromGoogle.json')
         gc = gspread.service_account(filename=myProc_path)
         return gc
 
